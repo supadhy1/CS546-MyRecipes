@@ -1,0 +1,107 @@
+<!DOCTYPE HTML>
+<html>
+{{>head}}
+<body id="pageBody">
+	{{>header}}
+	<div id="contentOuterSeparator"></div>
+	<div class="container">
+		<form class="auth-form" method="post">
+		    <div class="form-group">
+				<label class="control-label col-sm-3">User Name : </label>
+				<div class="col-lg-8">
+				 <input
+					type="text" class="form-control" style="width:400px;" name="username" placeholder="Enter User Name"
+					value="{{username}}">
+				</div>	
+			</div>
+			<div class="form-group">
+				<label class="control-label col-sm-3">Password : </label> 
+				<div class="col-lg-8">
+				<input
+					type="password" class="form-control" style="width:400px;" name="password" placeholder="Enter Password"
+					value="{{pass}}" >
+				</div>	
+			</div>
+			<div class="form-group has-success has-feedback">
+				<label class="control-label col-sm-3"> First Name : </label>
+				<div class="col-lg-8">
+				 <input
+					type="text" class="form-control" style="width:400px;" name="firstname" placeholder="Enter First Name" value="{{firstname}}">
+				</div>	
+			</div>
+			<div class="form-group">
+				<label class="control-label col-sm-3">Last Name : </label> 
+				<div class="col-lg-8">
+				<input
+					type="text" class="form-control" style="width:400px;" name="lastname" placeholder="Enter Last Name" 
+					value="{{lastname}}">
+				</div>	
+			</div>
+			<div class="form-group">
+				<label class="control-label col-sm-3">Occupation : </label>
+				<div class="col-lg-8">
+				 <input
+					type="text" class="form-control" style="width:400px;" name="occupation" placeholder="Enter Occupation"
+					value="{{occupation}}">
+				</div>	
+			</div>
+			<div class="form-group">
+				<label class="control-label col-sm-3">Email Address: </label> 
+				<div class="col-lg-8">
+				<input
+					type="text" class="form-control" style="width:400px;" name="email" placeholder="Enter Email Address" value="{{email}}">
+				</div>	
+			</div>
+
+			<div class="form-group">
+				<label class="control-label col-sm-3">Phone Number : </label>
+				<div class="col-lg-8">
+				 <input
+					type="text" class="form-control" style="width:400px;" name="contact" placeholder="Enter Phone Number" value="{{contact}}">
+					
+				</div>	
+			</div>
+
+			<div class="form-group">
+				<label class="control-label col-sm-3">Street Address : </label> 
+				<div class="col-lg-8">
+				<input
+					type="text" class="form-control" style="width:400px;" name="streetaddress" placeholder="Enter Street Address"
+					value="{{streetaddress}}"> 
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="control-label col-sm-3">State : </label>
+				<div class="col-lg-8">
+				 <input
+					type="text" class="form-control" style="width:400px;" name="state" placeholder="Enter State" value="{{state}}">
+				</div>	
+			</div>
+
+			<div class="form-group">
+				<label class="control-label col-sm-3">Zipcode : </label>
+				<div class="col-lg-8">
+				 <input
+					type="text" class="form-control" style="width:400px;" name="zipcode" placeholder="Enter Zipcode" value="{{zipcode}}">
+				</div>	
+			</div>
+			
+
+			{{#if error }}
+			<div class="form-group">
+				<div class="alert alert-danger">{{ error }}</div>
+			</div>
+			{{/if}} {{#if result }}
+			<div class="form-group">
+				<div class="alert alert-success">The user {{ result }} is
+					created</div>
+			</div>
+			{{/if}}
+			<div class="form-group">
+				<button type="submit" class="btn btn-primary btn-lg active">Join
+					Now</button>
+			</div>
+		</form>
+	</div>
+</body>
+</html>

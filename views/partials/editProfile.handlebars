@@ -1,0 +1,98 @@
+<div class="stepwizard">
+    <div class="stepwizard-row setup-panel">
+        <div class="stepwizard-step">
+            <a href="#step-1" type="button" class="btn btn-primary btn-circle">1</a>
+            <p>Step 1</p>
+        </div>
+        <div class="stepwizard-step">
+            <a href="#step-2" type="button" class="btn btn-default btn-circle" disabled="disabled">2</a>
+            <p>Step 2</p>
+        </div>
+        <div class="stepwizard-step">
+            <a href="#step-3" type="button" class="btn btn-default btn-circle" disabled="disabled">3</a>
+            <p>Step 3</p>
+        </div>
+         <div class="stepwizard-step">
+            <a href="#step-4" type="button" class="btn btn-default btn-circle" disabled="disabled">4</a>
+            <p>Step 4</p>
+        </div>
+    </div>
+</div>
+<form role="form">
+    <div class="row setup-content" id="step-1">
+        <div class="col-xs-12">
+            <div class="col-md-12">
+                <h3> Step 1</h3>
+                <div class="form-group">
+                    <label class="control-label">Recipe Name</label>
+                    <input  maxlength="100" type="text" required="required" class="form-control" placeholder="Enter Recipe Name"  />
+                </div>
+                <div class="form-group">
+                    <label class="control-label">Cuisine</label>
+                    <input maxlength="100" type="text" required="required" class="form-control" placeholder="Enter Cuisine" />
+                </div>
+                
+  
+                 <div class="form-group">
+                    <label class="control-label">Preparation Time</label>
+                    <input  maxlength="100" type="text" required="required" class="form-control" placeholder="Enter Preparation time"  />
+                </div>
+                <div class="form-group">
+                    <label class="control-label">Cooking Time</label>
+                    <input maxlength="100" type="text" required="required" class="form-control" placeholder="Enter Cooking Time" />
+                </div>
+                
+                
+                <button class="btn btn-primary nextBtn btn-lg pull-right" type="button" >Next</button>
+            </div>
+        </div>
+    </div>
+    <div class="row setup-content" id="step-2">
+        <div class="col-xs-12">
+            <div class="col-md-12">
+                <h3> Step 2</h3>
+                <div class="form-group">
+                    <label class="control-label">Ingredients</label>
+                    <input maxlength="200" type="text" required="required" class="form-control" placeholder="Enter Company Name" />
+                </div>
+               
+                <button class="btn btn-default prevBtn btn-lg pull-left" type="button" >Prev</button>
+                <button class="btn btn-primary nextBtn btn-lg pull-right" type="button" >Next</button>
+            </div>
+        </div>
+    </div>
+    <div class="row setup-content" id="step-3">
+        <div class="col-xs-12">
+            <div class="col-md-12">
+                <h3> Step 3</h3>
+                <div class="form-group">
+                    <label class="control-label">Procedure</label>
+                    <textarea maxlength="200" type="text" required="required" class="form-control" placeholder="Enter skill or skills" />
+                </div>
+               
+                <button class="btn btn-default prevBtn btn-lg pull-left" type="button" >Prev</button>
+                <button class="btn btn-primary nextBtn btn-lg pull-right" type="button" >Next</button>
+            </div>
+        </div>
+    </div>
+    <div class="row setup-content" id="step-4">
+        <div class="col-xs-12">
+            <div class="col-md-12">
+                <h3> Step 4</h3>
+                <div class="form-group">
+                
+                 <img src="../public/images/caprese.jpg" id="img-upload2" class="avatar img-circle img-thumbnail" alt="avatar"/>
+                         <h6>Upload recipe photo...</h6>
+                         <span class="btn btn-default btn-file">
+                
+                               <input type="file" name="imgInp2" id="imgInp2">
+                         </span>
+                    </div>
+                         
+                
+                <button class="btn btn-default prevBtn btn-lg pull-left" type="button" >Prev</button>
+                <button class="btn btn-success btn-lg pull-right" type="submit">Finish!</button>
+            </div>
+        </div>
+    </div>
+</form>

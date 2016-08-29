@@ -1,0 +1,84 @@
+<!DOCTYPE HTML>
+<html>
+    
+{{>head}}
+
+<body id="pageBody">
+
+{{>user-header}}
+
+<div id="contentOuterSeparator"></div>
+
+<div class="container">
+
+    <div class="divPanel page-content">
+
+        <div class="breadcrumbs">
+                
+                <button class="btn btn-primary nextBtn btn-lg pull-right" type="button" onclick="window.location.href ='/My-Recipes/updateRecipe/{{recipe._id}}'" >Update</button>
+        </div> 
+
+        <div class="row-fluid">
+      
+      <!--Edit Sidebar Content here-->
+                <div class="span3">                    
+                 <h1>{{recipe.name}}</h1>  
+                <!-- Start Side Categories -->  
+                 <img src="../../public/images/recipe_images/{{recipe.image_url}}" class="img-rounded" alt="recipe image">
+          
+        <p>Cuisine : {{recipe.cuisine}}</p>
+            <p>Description : {{recipe.description}}</p>
+            
+      <h4>Indgredients :</h4>
+            <div>
+
+           <ul>
+
+            {{#each recipe.ingredients}}
+
+            <li>{{name}}&nbsp;({{min_q}})</li>
+
+            {{/each}}
+
+      </ul>
+
+</div>
+
+                </div>
+                                  
+         
+        <!--/End Sidebar Content -->                
+                           
+              <!--Edit Main Content Area here-->
+                <div class="span6" id="divMain">
+
+                    <h1>Procedure</h1>
+          <hr>  
+                    <p>preparation Time: {{recipe.prep_time}} | Cooking Time: {{recipe.cook_time}} | Servings: {{recipe.servings}}</p>
+                    <p>{{recipe.procedure}}</p>   
+                              
+        </div>                               
+                <!--Edit Sidebar Content here-->
+                           
+                
+                
+        </div>           
+         </div>
+         </div>
+        <!--/End Sidebar Content -->                                
+        <!--/End Main Content Area here-->                  
+          
+              
+<script src="../../public/scripts/jquery.min.js" type="text/javascript"></script> 
+<script src="../../public/scripts/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="../../public/scripts/default.js" type="text/javascript"></script>
+
+ 
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+        crossorigin="anonymous"></script>
+<script src="../../public/js/comments.js"></script>
+
+
+</body>
+</html>
+

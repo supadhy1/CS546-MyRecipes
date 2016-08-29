@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html>
+<html>
+{{>head}}
+<body id="pageBody">
+    {{>header}}
+
+<div id="decorative1" style="position:relative">
+    <div class="container">
+
+        <div class="divPanel headerArea">
+            <div class="row-fluid">
+                <div class="span12">
+    
+                        <div class="span6">
+
+                            <div id="divHeaderText" class="page-content">
+                               <div id="divHeaderLine1">Search your recipes!</div><br />
+                               
+                                <form class="form-wrapper" id="form-wrapper">
+                                  <div id="divHeaderLine-recipe"> 
+                                  <label for="search-recipe" class="col-lg-3 control-label">Recipe:</label>
+                                  <input type="text" id="search-recipe" placeholder="Search for Recipe..." required>
+                                  <input type="submit"  value="go" id="submit-recipe"> 
+                                  </div>
+                                  </form>
+                                  <form class="form-wrapper" id="form-wrapper1">
+                                
+                                  <div id="divHeaderLine-cuisine"> 
+                                  <label for="search-cuisine" class="col-lg-3 control-label">Cuisine:</label>
+                                  <input type="text" id="search-cuisine" placeholder="Search for cuisine..." required>
+                                  <input type="submit"  value="go" id="submit-cuisine">
+                                  </div>
+                                  </form>
+                                  <form class="form-wrapper" id="form-wrapper2">
+                                
+                                  <div id="divHeaderLine-ingredients"> 
+                                 <label for="search-ingredient" class="col-lg-3 control-label">ingredient:</label>
+                                  <input type="text" id="search-ingredient" placeholder="Search for ingredient..." required>
+                                  <input type="submit"  value="go" id="submit-ingredient">
+
+                                  </div>
+                               </form>                      
+                                 
+                           </div>
+                        </div>
+                                 <div class="span6">
+                            
+                                  <div id="camera_wrap">
+<div data-src="../public/images/caprese.jpg" alt="home image"><div class="camera_caption fadeFromBottom cap1"></div></div>
+<div data-src="../public/images/plate.jpg"  alt="home1 image"><div class="camera_caption fadeFromBottom cap2"></div></div>
+<div data-src="../public/images/gourmandises.jpg" alt="home2 image"><div class="camera_caption fadeFromBottom cap1"></div></div>
+                            </div>
+            
+                            </div>
+                            </div>
+                         <div id="headerSeparator2"></div>
+                            <div class="row-fluid">
+                                <div class='span12'>
+                            <div id="recipe_List"><br /> <br /> 
+                  <!--      <div id="divHeaderLine1">Search results</div><br />-->
+                          <div class="row-fluid">
+                                                  
+                            <ul>
+                            {{#each recList}}
+                            <li><h3> {{recipe}}<h3><br /> </li><br />
+                            {{/each}}
+                            </ul>
+                          </div>
+                            </div>             
+                            </div>  
+                            </div>     
+                            </div>
+                            </div>
+                            <div id="headerSeparator3"></div>
+                            <div class="row-fluid">
+                            <div id="related_List"><br /> <br /> 
+                         <!--   <div id="divHeaderLine1">Related Recipes with cuisine</div><br /> 
+                            <ul>
+                            {{#each recList}}
+                            <li><h3> {{recipe}}<h3><br /> </li><br />
+                            {{/each}}
+                            </ul>-->
+                            </div>  
+                            <div id="related_List_ing"><br /> <br /> 
+                          <!-- <div id="divHeaderLine1">Related Recipes</div><br />-->
+                            <ul>
+                            {{#each recList1}}
+                            <li> {{recipe}}<br /> </li><br />
+                            {{/each}}
+                            </ul>
+                            </div>        
+                            </div>
+                            </div>
+                            
+                            </div>
+                        
+
+<script src="../public/scripts/jquery.min.js" type="text/javascript"></script> 
+<script src="../public/scripts/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="../public/scripts/default.js" type="text/javascript"></script>
+
+
+<script src="../public/scripts/carousel/jquery.carouFredSel-6.2.0-packed.js" type="text/javascript"></script><script type="text/javascript">$('#list_photos').carouFredSel({ responsive: true, width: '100%', scroll: 2, items: {width: 320,visible: {min: 2, max: 6}} });</script><script src="../public/scripts/camera/scripts/camera.min.js" type="text/javascript"></script>
+<script src="../public/scripts/easing/jquery.easing.1.3.js" type="text/javascript"></script>
+<script type="text/javascript">function startCamera() {$('#camera_wrap').camera({ fx: 'scrollLeft', time: 2000, loader: 'none', playPause: false, navigation: true, height: '65%', pagination: true });}$(function(){startCamera()});</script>
+<script src="../../public/js/search.js"></script>
+
+</body>
+</html>
